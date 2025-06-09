@@ -36,7 +36,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # general options
 zle_highlight=('paste:none')
-bindkey -v
 
 # remove underline for paths
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
@@ -57,14 +56,13 @@ bindkey "$key[Down]" down-line-or-beginning-search
 # add alias and extend path
 alias dots='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 alias emacs='GTK_THEME=Adwaita:dark emacsclient -n -c -a "" -F "((fullscreen . fullboth))"'
+alias ec='emacsclient --tty'
 alias tree='exa --tree --level=2'
 alias ls='exa'
 alias ip='ip -c'
 
 # extend path variable
-path+='/home/oli/src/apt-undo'
-path+='/usr/local/go/bin'
-path+='/home/oli/.local/share/nvim/mason/bin'
+path+='/home/oli/Src/apt-undo'
 
 # set go variables
 export GOPATH=$HOME/.go
