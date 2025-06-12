@@ -11,16 +11,15 @@ $line_break\
 $python"""
 
 [directory]
-style = "red"
+style = "white"
 read_only = "!"
 
 [line_break]
 disabled = true
 
 [character]
-success_symbol = "[](white) "
-error_symbol = "[](red) "
-vimcmd_symbol = "[](green) "
+success_symbol = "[](blue) "
+error_symbol = "[](red) "
 
 [git_branch]
 format = "[$branch]($style)"

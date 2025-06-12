@@ -50,27 +50,14 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-z/zsh-z.plugin.zsh
 
 # keybinds
-bindkey "$key[Up]" up-line-or-beginning-search
-bindkey "$key[Down]" down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
 
 # add alias and extend path
 alias dots='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 alias emacs='GTK_THEME=Adwaita:dark emacsclient -n -c -a "" -F "((fullscreen . fullboth))"'
 alias ec='emacsclient --tty'
 alias tree='exa --tree --level=2'
-alias ls='exa'
-alias ip='ip -c'
-
-# extend path variable
-path+='/home/oli/Src/apt-undo'
-
-# set go variables
-export GOPATH=$HOME/.go
-export GOBIN=$HOME/.go/bin
-
-# set xserver
-# export DISPLAY=$(ip route | grep default | awk '{print $3; exit;}'):0.0
-export GDK_DPI_SCALE=1.25
 
 # enable starship
 eval "$(starship init zsh)"
